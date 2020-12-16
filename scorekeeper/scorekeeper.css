@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    align-items: center;
+    display:flex;
+    align-items: center;
+
+    justify-content: center;
+    height: 100vh;
+}
+.container{
+    width: 30%;
+    border:2px rgb(214, 209, 209) solid;
+    margin:20px auto;
+    line-height: 2rem;
+}
+.scoreDiv{
+    padding: 0 1rem;
+}
+
+.btnDiv{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.5rem;
+}
+.btnDiv button{
+    width: 30%;
+    padding: 0.5rem 0;
+}
+.winner{
+    color: green;
+}
+.loser{
+    color: red;
+}
