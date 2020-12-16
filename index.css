@@ -15,6 +15,7 @@ body{
 }
 .outerDiv{
     width:35%;
+    min-width: 300px;
     height: 70%;
     border: 2px grey solid;
     border-radius: 20px;

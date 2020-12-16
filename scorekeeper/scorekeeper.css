@@ -16,6 +16,7 @@ body{
 }
 .container{
     width: 30%;
+    min-width: 300px;
     border:2px rgb(214, 209, 209) solid;
     line-height: 2rem;
 }
