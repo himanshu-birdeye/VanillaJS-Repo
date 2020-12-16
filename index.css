@@ -1,107 +1,42 @@
-
-
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
 body{
-    background-color: lightgray;
-    min-height: 100px;
-    
-}
-
-
-
-.todo-container{
-    align-items: center;                                       /*  Meaning ??? */
-    /*border:red 2px solid;
-    padding-left: 0;*/
-}
-
-
-.todo-list{
-    min-width: 30%; 
-    margin:0;
-}
-
-.todo{
-    display: flex;                                   /* To display delete and done button in the test line*/
-    font-size:1.2rem;
-    justify-content: space-between;                         /* To put space between elements */
-    padding: 10px;                                          /* to put space between to list items*/
-    transition: all 1s ease;                              /*Transition */
-}
-
-.todo li{                                               /*meaning of flex ??? */
-    flex:1;
-    padding:2px 0px ;                           /* meaning????  */
-    /*list-style-type: none;    */                        /*Removing bullets or numbers*/      
-    /*background-color: blueviolet; */                   
-}
-
-.trash-btn,
-.complete-btn{
-    cursor: pointer;
-}
-
-.trash-btn{
-    background: sandybrown;
-}
-.complete-btn{
-    background: sandybrown;
-}
-.trash-btn:hover{
-background: red;
-}
-
-.completed{
-    text-decoration: line-through;               /* when clicked on done button */
-    opacity: 0.3;
-}
-
-#innerdiv{
-    border-radius: 30px;
-    width: 35%;
-    min-height: 500px;
-    border: 5px solid sandybrown;
-    background-color: azure;
-    padding: 10px;
-    margin:auto;
-}
-#outerdiv{
-    padding: 140;
+    display: flex;
     align-items: center;
-    /*border: crimson 5px solid;*/
+
+    justify-content: center;
+    height: 100vh;
+
+    background-color: rgb(159, 205, 245);
+
+}
+.outerDiv{
+    width:35%;
+    height: 70%;
+    border: 2px grey solid;
+    border-radius: 20px;
+
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    background-color: rgb(241, 186, 123);
 }
 
-h1{
-    color:white;
+.outerDiv button{
+    width:100%;
+    padding: 1rem;
+    background-color: rgb(233, 229, 229);
+    border:2px solid white;
+    font-size: 1.3rem;
     border-radius: 10px;
-    background-color: sandybrown;
-    padding: 5px;
 }
 
-input{
-    border-radius: 10px;
-    background-color: white;
-    border: 2px solid sandybrown;
-    width:80%;
-    height:30px;
-}
-
-button:hover{
-    background-color: green;
-}
-
-#innerdiv:hover{
-    background: cornsilk;
-}
-
-button{
-    border-radius: 10px;
-    background-color:rgb(224,195,224);
-    border: 2px solid white;
-    width:auto;
-    height:30px;
-}
-#anothertodobtn{
-    margin:10 20 10 550;
-    
+.outerDiv button:hover{
+    background-color: rgb(180, 164, 164);
+    font-weight: bold;
     
 }

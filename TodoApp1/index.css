@@ -1,0 +1,104 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: lightgray;
+    /* min-height: 100px; */
+    height: 100vh;
+
+    align-items: center;
+    justify-content: center;
+
+    display: flex;
+    flex-direction: column;   
+}
+
+
+#innerdiv{
+    border-radius: 30px;
+    width: 30%;
+    min-height: 400px;
+    border: 5px solid sandybrown;
+    background-color: azure;
+    padding: 10px;
+}
+#innerdiv:hover{
+    background: cornsilk;
+}
+
+.todo-container{
+    align-items: center;                                       /*  Meaning ??? */
+   
+}
+
+
+.todo-list{
+    min-width: 30%; 
+    margin:0;
+}
+
+.todo{
+    display: flex;                                   /* To display delete and done button in the test line*/
+    font-size:1.2rem;
+    justify-content: space-between;                         /* To put space between elements */
+    padding: 10px;                                          /* to put space between to list items*/
+    transition: all 1s ease;                              /*Transition */
+}
+
+.todo li{                                               /*meaning of flex ??? */
+    flex:1;
+    padding:2px 0px ;                           /* meaning????  */
+    /*list-style-type: none;    */                        /*Removing bullets or numbers*/      
+    /*background-color: blueviolet; */                   
+}
+
+.trash-btn,
+.complete-btn{
+    cursor: pointer;
+}
+
+.trash-btn{
+    background: sandybrown;
+}
+.complete-btn{
+    background: sandybrown;
+}
+.trash-btn:hover{
+background: red;
+}
+
+.completed{
+    text-decoration: line-through;               /* when clicked on done button */
+    opacity: 0.3;
+}
+
+h1{
+    color:white;
+    border-radius: 10px;
+    background-color: sandybrown;
+    padding: 5px;
+}
+
+input{
+    border-radius: 10px;
+    background-color: white;
+    border: 2px solid sandybrown;
+    width:80%;
+    height:30px;
+}
+
+button:hover{
+    background-color: green;
+}
+
+button{
+    border-radius: 10px;
+    background-color:rgb(224,195,224);
+    border: 2px solid white;
+    width:auto;
+    height:30px;
+}
+#homeBtn{
+    margin:10px;
+}

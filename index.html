@@ -1,109 +1,23 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>My TO Do List</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla JS Apps</title>
     <link rel="stylesheet" href="index.css">
-
 </head>
 
 <body>
+    <div class='outerDiv'>
+        <h1>Click to use following Apps:</h1>
 
-    <div id="outerdiv">
-        <a href="todo app.html"><button id="Home">See Another ToDo app</button></a>
-        <div id="innerdiv">
-
-            <h1>My To Do list</h1>
-
-            <form>
-                <input type="text" class="todo-input" placeholder="Add an item...." />
-                <button class="todo-button" type="submit">Add➕</button>
-            </form>
-
-            <div class="todo-container">
-                <ol class="todo-list"></ol>
-            </div>
-
-        </div>
-
+        <a href="TodoApp1/index.html"><button>Todo App 1</button></a>
+        <a href="TodoApp2/todo app.html"><button>Todo App 2</button></a>
+        <a href="scorekeeper/scorekeeper.html"><button>Score Keeper</button></a>
+        <a href="Pricing panel/pricingPanel.html"><button>Price Panel</button></a>
     </div>
-    <script src="./index.js"></script>
+
 </body>
-<script src="./index.js"></script>
-<!-- <script>
-
-    //selectors
-    const todoinput=document.querySelector(".todo-input");
-    const todoaddbutton=document.querySelector(".todo-button");
-    const todolist=document.querySelector(".todo-list");
-
-    /*function addtodo(event){
-        alert("test");
-    }*/
-
-
-    //event listeners
-    todoaddbutton.addEventListener('click',addtodo);
-    todolist.addEventListener('click', deletecheck);
-
-
-    //functions
-
-    function deletecheck(e){
-        const item=e.target;
-            
-        if(item.classList[0]==="trash-btn"){                        //???????
-            const todoli=item.parentElement;
-            todoli.remove();
-        }
-        if(item.classList[0]==="complete-btn"){                        //???????
-            const todoli=item.parentElement;
-            todoli.classList.toggle("completed");                       // toggle classlist as "completed"
-        }
-    }
-
-    function addtodo(event){
-
-        event.preventDefault();     //prevent form from submitting
-
-        var innertextvalue=todoinput.value;
-        if(innertextvalue.trim()==='')
-        {
-            alert("You must write something");
-            todoinput.value='';   
-            return;
-        }
-        
-
-        const tododiv=document.createElement('div');   // Accessing todo div
-        tododiv.classList.add("todo");
-
-        const newtodo= document.createElement('li');
-        newtodo.innerText=todoinput.value;
-        newtodo.classList.add('todo-item');
-        tododiv.appendChild(newtodo);
-
-        // Adding check button
-        const completedbutton=document.createElement('button');
-        completedbutton.innerText="Done";                            //use innerHTML for adding icon <i>
-        completedbutton.classList.add("complete-btn");
-        tododiv.appendChild(completedbutton);
-
-        // Adding trash button
-        const trashbutton=document.createElement('button');
-        trashbutton.innerText="Delete";                            //use innerHTML for adding icon
-        trashbutton.classList.add("trash-btn");
-        tododiv.appendChild(trashbutton);
-
-
-        // Append tododiv to list
-        todolist.appendChild(tododiv);                              // add todoDiv to list
-
-        todoinput.value="";                                         //delete the value from input
-
-    } -->
-
-
-
-</script>
 
 </html>

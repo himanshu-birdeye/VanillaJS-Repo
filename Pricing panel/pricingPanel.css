@@ -57,6 +57,7 @@ body{
     background-color: cornflowerblue;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;        /* For center align horizontally*/
 
     align-items: center;            /* For center align vertically*/
@@ -70,19 +71,20 @@ body{
     text-align: center;
     text-transform: uppercase;
 
-    width: 100%;                /*  percentage of parent element*/
+    width: 100%;                /* percentage of parent element*/
     max-width: 860px;
     
     display:flex;             /* All elements of this div will become inline */
     flex-direction: column;
-
-
-    
 }
+
+.homeBtn{
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
 .innerdiv{
-    /* background-color: darkgoldenrod; */
     margin:0.5rem 1rem;
-    /* padding: 0.5rem; */
 }
 
 .innerdiv img{
