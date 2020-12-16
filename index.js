@@ -1,39 +1,11 @@
-<html >
-<head>
-    <title>My TO Do List</title>
-    <link rel="stylesheet" href="index.css">
-    
-</head>
-<body>
-
-    <div id="outerdiv">
-        <a href="todo app.html"><button id="anothertodobtn">See Another ToDo app</button></a>
-        <div id="innerdiv">
-
-            <h1>My To Do list</h1>
-
-            <form>
-            <input type="text" class="todo-input" placeholder="Add an item...."/>
-            <button class="todo-button" type="submit">Add➕</button>
-            </form>
-
-            <div class="todo-container"> 
-            <ol class="todo-list"></ol>
-            </div>
-
-        </div>
-        
-    </div>
-    <script src="./index.js"></script>
-</body>
-<script src="./index.js"></script>
-<!-- <script>
 
     //selectors
-    const todoinput=document.querySelector(".todo-input");
-    const todoaddbutton=document.querySelector(".todo-button");
+    // const todoinput=document.querySelector(".todo-input");
+    const todoinput=document.getElementsByClassName("todo-input")[0];
+    const todoaddbutton=document.querySelectorAll(".todo-button")[0];
     const todolist=document.querySelector(".todo-list");
 
+    
     /*function addtodo(event){
         alert("test");
     }*/
@@ -50,7 +22,7 @@
         const item=e.target;
             
         if(item.classList[0]==="trash-btn"){                        //???????
-            const todoli=item.parentElement;
+            const todoli=item.parentElement;                        //check
             todoli.remove();
         }
         if(item.classList[0]==="complete-btn"){                        //???????
@@ -98,9 +70,6 @@
 
         todoinput.value="";                                         //delete the value from input
 
-    } -->
+    }
 
 
-
-</script>
-</html>

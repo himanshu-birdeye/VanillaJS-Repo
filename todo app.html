@@ -1,0 +1,190 @@
+<html>
+<head>
+<style>  
+
+body{
+    margin:0px;
+    min-width: 250px;
+    align-items: center;
+    padding-top: 140px;
+    padding-bottom: 140px;
+    background-color: rgb(180, 238, 238);
+    
+}
+
+*{box-sizing: border-box;}
+.outerdiv{
+    width:30%;
+    margin:auto;
+    border:gray 5px solid;
+    min-height: 500px;
+    border-radius: 10px;
+    
+}
+#anothertodobtn{
+    margin:10 20 10 550;
+    padding:10px;
+    
+}
+
+
+ul{
+    margin:0;
+    padding: 0;
+}
+ul li{
+    cursor: pointer;
+    padding: 12px 8px 12px 40px;
+    background: rgb(228, 224, 224);
+    list-style-type:none ;
+    margin:0;
+    position: relative;
+}
+/*
+ul li:nth-child(odd){
+    background-color: rgb(229, 226, 226);
+}
+*/
+ul li:hover{
+    background-color: rgb(199, 194, 194);
+}
+ul li.checked{
+    background-color: gray;
+    text-decoration: line-through;
+}
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: rgb(236, 232, 232);
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+ 
+span{
+    padding: 12px 20px 12px 20px;
+    margin:0;
+    position: absolute;
+    right:0;
+    top:0;
+}
+span:hover{
+    background-color: rgb(78, 76, 76);
+}
+
+header{
+    padding: 20px 40px 20px 40px;
+    background-color: rgb(221, 127, 127);
+    text-align: center;
+    
+}  
+
+input{
+    border: none;
+    width: 75%;
+    font-size: 16px;
+    padding:10px;
+    float: left;
+}
+
+.addbtn
+{   
+    padding:10px 15px;
+    font:16px;
+}
+
+</style>    
+    
+    <title>To Do List</title>
+</head>
+<body>
+    <a href="index.html"><button id="anothertodobtn">See Another ToDo app</button></a>
+    <div class="outerdiv">
+    <header>
+        <h1>ToDo List</h1>   
+        <input id="myinput" placeholder="Please Enter item......" />
+        <button class="addbtn" onclick="newElement()">Add</button>
+    </header>
+
+    <ul id="myUL">
+        <li>Complete the assignment</li>
+        <li class="checked">Buy the charger</li>
+        <li>Remove Diwali lights</li>
+        <li>Go to gym</li>
+    </ul>   
+    
+    </div>  
+
+
+
+
+    <script>
+        var myNodelist=document.getElementsByTagName("li");    //collection of all list items
+
+        //Addition of Span containing cross
+        for(var i=0;i<myNodelist.length;i++)
+        {
+            var Span= document.createElement('SPAN');
+            var txt= document.createTextNode("x");
+            Span.className="close";
+            Span.appendChild(txt);
+
+            myNodelist[i].appendChild(Span);
+        }
+
+        // Adding Checked functionality on clicking on list
+        var list= document.querySelector("ul");
+        list.addEventListener('click', function(ev){
+            if(ev.target.tagName ==='LI')
+            {   
+                ev.target.classList.toggle('checked');
+            }
+        },false);
+
+        // Functionality of Cross 
+        var close=document.getElementsByClassName("close");
+        for(var i=0;i<close.length;i++)
+        {
+            close[i].onclick=function(){
+                var div=this.parentElement;
+                div.style.display="none";
+            }
+        }
+
+        //Functionality of Add button: Adding list and span
+        function newElement(){
+
+            var li=document.createElement('li');
+            var inputval= document.getElementById("myinput").value;
+            var txt=document.createTextNode(inputval);
+            li.appendChild(txt);
+            if(inputval.trim() ===""){
+                alert("Blank items can't be added. Please write something");
+            }else{
+                document.getElementById("myUL").appendChild(li);
+            }
+            document.getElementById("myinput").value="";
+
+            span=document.createElement('span');
+            var txt=document.createTextNode("x");
+            span.appendChild(txt);
+            span.className="close";
+            li.appendChild(span);
+
+            for(var i=0;i<close.length;i++){
+                 close[i].onclick=function(){
+                     var div=this.parentElement;
+                     div.style.display="none";
+                 }
+            }
+        }
+        
+    </script>
+
+    
+</body>
+</html>
